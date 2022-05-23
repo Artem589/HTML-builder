@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const {stdout} = process
+const {stdout} = process;
 
 const newFolder = path.join(__dirname, 'files-copy');
 const folder = path.join(__dirname, 'files');
