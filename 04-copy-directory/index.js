@@ -5,7 +5,6 @@ const {stdout} = process;
 const newFolder = path.join(__dirname, 'files-copy');
 const folder = path.join(__dirname, 'files');
 
-
 function createFolder() {
   fs.mkdir(newFolder, { recursive: true }, (err) => {
     if (err) throw err;
@@ -14,7 +13,6 @@ function createFolder() {
 }
 
 function copyFolder() {
-  createFolder();
   fs.readdir(newFolder, {withFileTypes: true}, (err, data) => {
     if(err) throw err;
     data.forEach((file) => {
@@ -40,6 +38,7 @@ function copyFolder() {
   });
 }
 
+createFolder();
 copyFolder();
 
 
